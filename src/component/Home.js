@@ -4,8 +4,7 @@ function Home() {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        // Gọi API để lấy danh sách sản phẩm từ backend
-        fetch('/api/products')
+        fetch('http://localhost:3002/api/products')
             .then(response => response.json())
             .then(data => setProducts(data));
     }, []);
